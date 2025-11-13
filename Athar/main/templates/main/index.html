@@ -1,0 +1,62 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_style %}
+<style>
+  body {
+    font-family: 'SaudiCraft', 'Cinzel', sans-serif;
+    background-image: url("https://i.top4top.io/p_3604i6zkl1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+  }
+
+  body.dark {
+    background-image: url("https://e.top4top.io/p_3604zan763.png");
+    color: #fff;
+  }
+</style>
+{% endblock %}
+
+{% block title %}
+{% trans "Home Page" %}
+{% endblock %}
+
+{% block content %}
+<div class="flex flex-col">
+
+ 
+  <section class="py-16 px-4 md:px-20">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+
+      
+      <div class="md:w-1/2 text-right space-y-6">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary">
+          {% trans "Discover the shocks of Saudi Arabian cities" %}
+        </h1>
+        <p class="text-primary text-lg sm:text-xl md:text-2xl leading-relaxed">
+          {% trans "From Riyadh, the birthplace of the modern state, to Diriyah, steeped in the rich history of the past, " %}
+          {% trans "this site offers a window into the Kingdom's history through its historical landmarks and distinctive military sites." %}
+          {% trans "Every fortress, every palace, and every street tells a story of civilization and heritage, and every visit here takes " %}
+          {% trans "you on a journey between past and present, revealing the diverse identities of Saudi cities across the centuries." %}
+        </p>
+        <a href="#map-section"
+          class=" explor inline-block mt-4 px-6 py-3 bg-gold text-primary rounded-lg shadow-md hover:bg-yellow-700 transition">
+          {% trans "Explore the ruins" %} </a>
+      </div>
+    </div>
+  </section>
+  <section id="map-section">
+    <div class="relative w-full flex flex-col items-center"> 
+      <!-- Map --> 
+      <object id="saudi-map" type="image/svg+xml"
+        data="{% static 'images/saudi_map.svg' %}"></object>
+      <div id="map-links" class="hidden"> {% for region_id, region_name, view_name in regions_list %} <a
+          href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"> {{ region_name }} </a> {% endfor %}
+      </div>
+    </div>
+  </section>
+</div> {% endblock %}

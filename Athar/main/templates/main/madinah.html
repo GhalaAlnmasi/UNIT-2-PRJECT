@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %} {% trans "Asir" %} {% endblock %}
+
+{% block content %}
+<section class="min-h-screen py-16 px-6 bg-transparent flex flex-col items-center">
+  
+  <!-- العنوان الرئيسي -->
+  <div class="text-center max-w-3xl mb-12">
+    <h1 class="text-5xl font-extrabold text-primary mb-4 drop-shadow-sm">{{ region.title }}</h1>
+    <p class="text-brgandy text-lg leading-relaxed">{{ region.subtitle }}</p>
+  </div>
+
+  <!-- شبكة المواقع -->
+  <div class="grid gap-10 w-full max-w-6xl md:grid-cols-2 lg:grid-cols-3">
+    {% for loc in region.locations %}
+    <div class="bg-white/40 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden border border-white/30 
+                hover:scale-[1.03] hover:shadow-2xl transition-all duration-300">
+
+      <!-- الصورة -->
+      <div class="h-56 w-full overflow-hidden">
+        <img src="{{ loc.image }}" alt="{{ loc.name }}" 
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+      </div>
+
+      <!-- النص -->
+      <div class="p-6 text-center">
+        <h2 class="text-2xl font-bold text-primary mb-2">{{ loc.name }}</h2>
+        <p class="text-brgandy text-base leading-relaxed">{{ loc.description }}</p>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+
+</section>
+{% endblock %}

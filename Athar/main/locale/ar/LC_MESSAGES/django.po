@@ -1,0 +1,689 @@
+# SOME DESCRIPTIVE HEADER.
+msgid ""
+msgstr ""
+"Project-Id-Version: Athar 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-13 01:31+0000\n"
+"PO-Revision-Date: 2025-11-10 00:00+0000\n"
+"Last-Translator: Your Name <you@example.com>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main/templates/main/about.html:6
+msgid "About Us"
+msgstr "حول"
+
+#: main/templates/main/about.html:16
+msgid "About Atharana"
+msgstr "عن آثــارانــا"
+
+#: main/templates/main/about.html:20
+msgid ""
+"Our aim on this website is to showcase the beauty of Saudi heritage and its "
+"evolution over time,"
+msgstr "هدف في هذا الموقع إلى إبراز جمال التراث السعودي وتطوره عبر الزمن"
+
+#: main/templates/main/about.html:21
+msgid "from the authenticity of the past to the modernity of the present."
+msgstr "من أصالة الماضي إلى حداثة الحاضر"
+
+#: main/templates/main/about.html:22
+msgid "Our site combines a rich cultural identity with an innovative,"
+msgstr "يجمع موقعنا بين الهوية الثقافية العريقة والرؤية المستقبلية المبتكرة"
+
+#: main/templates/main/about.html:23
+msgid ""
+"forward-looking vision to offer a unique experience that reflects the spirit "
+"of the Kingdom."
+msgstr " لتقديم تجربة فريدة تعكس روح المملكة."
+
+#: main/templates/main/about.html:28
+msgid "Return to homepage"
+msgstr "العودة للرئيسية"
+
+#: main/templates/main/al-hudud-ash-shamaliyah.html:5
+#: main/templates/main/ash-sharqiyah.html:5 main/templates/main/asir.html:5
+#: main/templates/main/bahah.html:5 main/templates/main/hail.html:5
+#: main/templates/main/jizan.html:5 main/templates/main/jouf.html:5
+#: main/templates/main/madinah.html:5 main/templates/main/makkah.html:5
+#: main/templates/main/najran.html:5 main/templates/main/qassim.html:5
+#: main/templates/main/riyadh.html:5 main/templates/main/tabuk.html:5
+#: main/views.py:15 main/views.py:114
+msgid "Asir"
+msgstr "عسير"
+
+#: main/templates/main/base.html:114
+msgid "Atharana"
+msgstr "أثــارانــا"
+
+#: main/templates/main/base.html:119 main/templates/main/base.html:174
+msgid "Home"
+msgstr "الرئيسية"
+
+#: main/templates/main/base.html:125
+msgid "Regions"
+msgstr "المناطق"
+
+#: main/templates/main/base.html:139 main/templates/main/base.html:184
+msgid "About"
+msgstr "حول"
+
+#: main/templates/main/base.html:198
+msgid "© 2025 Atharana. All rights reserved."
+msgstr "© 2025 آثارنا. جميع الحقوق محفوظة."
+
+#: main/templates/main/index.html:25
+msgid "Home Page"
+msgstr "الرئيسية"
+
+#: main/templates/main/index.html:38
+msgid "Discover the shocks of Saudi Arabian cities"
+msgstr "اكتشف آثار مدن المملكة العربية السعودية"
+
+#: main/templates/main/index.html:41
+msgid ""
+"From Riyadh, the birthplace of the modern state, to Diriyah, steeped in the "
+"rich history of the past, "
+msgstr "من الرياض حيث شهدت ولادة الدولة الحديثة، إلى الدرعية التي تحمل عبق الماضي الأصيل،"
+
+#: main/templates/main/index.html:42
+msgid ""
+"this site offers a window into the Kingdom's history through its historical "
+"landmarks and distinctive military sites."
+msgstr "يقدم هذا الموقع نافذة على تاريخ المملكة من خلال آثارها ومواقعها التاريخية المميزة."
+
+#: main/templates/main/index.html:43
+msgid ""
+"Every fortress, every palace, and every street tells a story of civilization "
+"and heritage, and every visit here takes "
+msgstr "كل حصن، كل قصر، وكل شارع يحكي قصة حضارة وتراث، وكل زيارة هنا تأخذك في رحلة"
+
+#: main/templates/main/index.html:44
+msgid ""
+"you on a journey between past and present, revealing the diverse identities "
+"of Saudi cities across the centuries."
+msgstr "زمنية بين الماضي والحاضر، لتعرف كيف تشكلت هوية المدن السعودية عبر القرون"
+
+#: main/templates/main/index.html:48
+msgid "Explore the ruins"
+msgstr "استكشف الآثار"
+
+#: main/views.py:6 main/views.py:24
+msgid "Riyadh"
+msgstr "الرياض"
+
+#: main/views.py:7 main/views.py:51
+msgid "Ash-Sharqiyah"
+msgstr "الشرقية"
+
+#: main/views.py:8 main/views.py:60
+msgid "Qassim"
+msgstr "القصيم"
+
+#: main/views.py:9 main/views.py:33
+msgid "Makkah"
+msgstr "مكة المكرمة"
+
+#: main/views.py:10 main/views.py:42
+msgid "Madinah"
+msgstr "المدينة المنورة"
+
+#: main/views.py:11 main/views.py:69
+msgid "Tabuk"
+msgstr "تبوك"
+
+#: main/views.py:12 main/views.py:87
+msgid "Al-Jouf"
+msgstr "الجوف"
+
+#: main/views.py:13 main/views.py:78
+msgid "Hail"
+msgstr "حايل"
+
+#: main/views.py:14
+msgid "Al-Hudud Ash-Shamaliyah"
+msgstr "الحدود الشمالية"
+
+#: main/views.py:16 main/views.py:105
+msgid "Al-Baha"
+msgstr "الباحة"
+
+#: main/views.py:17 main/views.py:123
+msgid "Jazan"
+msgstr "جازان"
+
+#: main/views.py:18 main/views.py:132
+msgid "Najran"
+msgstr "نجران"
+
+#: main/views.py:25
+msgid "A city that started from clay, then became a full horizon."
+msgstr "مدينة بدأت من الطين، ثم صارت أفقًا كاملًا."
+
+#: main/views.py:27
+msgid "Al-Masmak Palace"
+msgstr "قصر المصمك"
+
+#: main/views.py:27
+msgid ""
+"A clay fortress with sharp lines resembling the first words of a long novel. "
+"Here the unification began, and here the moment of Riyadh’s recapture in "
+"1902 occurred. Every wall looks like an open historical page."
+msgstr ""
+"حصنٌ طينيٌّ بخطوطٍ حادةٍ تُشبه الكلمات الأولى من روايةٍ طويلة.هنا بدأ التوحيد، وهنا "
+"وقعت لحظة استعادة الرياض عام ١٩٠٢.كل جدارٍ فيه يبدو كصفحةٍ تاريخيةٍ مفتوحة."
+
+#: main/views.py:28
+msgid "Al-Turaif District - Diriyah (UNESCO site)"
+msgstr "حي الطريف - الدرعية (موقع اليونسكو)"
+
+#: main/views.py:28
+msgid ""
+"A clay city on the slopes of Wadi Hanifah. Narrow alleys, but vast memory. "
+"From here the first Saudi state arose, and the Najdis’ voices rose in "
+"architecture, jurisprudence, and politics."
+msgstr ""
+"مدينة طينية على سفوح وادي حنيفة. أزقتها ضيقة، لكن ذاكرتها واسعة.ومن هنا قامت "
+"الدولة السعودية الأولى، وارتفعت أصوات النجديين فيهالهندسة المعمارية، والفقه، "
+"والسياسة."
+
+#: main/views.py:29
+msgid "Wadi Hanifah"
+msgstr "وادي حنيفة"
+
+#: main/views.py:29
+msgid ""
+"A green strip cutting through the desert. It was a caravan route and a "
+"center of settlement; today it’s an extended oasis combining the city with "
+"its natural history."
+msgstr ""
+"شريط أخضر يشق الصحراء. كان طريقًا للقوافل ومركزًا للاستيطان؛ واليوم هو واحة "
+"ممتدة تجمع بين المدينةوتاريخها الطبيعي."
+
+#: main/views.py:34
+msgid "A heart where people walk from all directions."
+msgstr "قلب يمشي اليه الناس من جميع الاتجاهات."
+
+#: main/views.py:36
+msgid "Jabal Noor – Hira Cave"
+msgstr "جبل النور – غار حراء"
+
+#: main/views.py:36
+msgid ""
+"The mountain that witnessed the start of revelation. The mountain does not "
+"comment on history, but it remains standing as if it knows more than it says."
+msgstr ""
+"الجبل الذي شهد بداية الوحي.لا يُعلّق الجبل على التاريخ، بل يبقى واقفًا كأنه "
+"يعرف أكثر مما يقول."
+
+#: main/views.py:37
+msgid "Al-Bay’ah Mosque"
+msgstr "مسجد البيعة"
+
+#: main/views.py:37
+msgid ""
+"Site of the pledge of allegiance of the Ansar to the Prophet ﷺ. Simple in "
+"form, heavy in symbolism. Here, words were not mere words, they were the "
+"foundation of destiny."
+msgstr ""
+"موقع بيعة الأنصار للنبي ﷺ. بسيط في شكله، ثري بالرمزية.هنا، لم تكن الكلمات "
+"مجرد كلمات، بل كانت أساس المصير."
+
+#: main/views.py:38
+msgid "Makkah Museum of Heritage and Antiquities"
+msgstr "متحف مكة للتراث والآثار"
+
+#: main/views.py:38
+msgid ""
+"An old Ottoman house turned into an open memory: tools, manuscripts, old "
+"mosque doors, and pilgrims’ clothes from centuries past."
+msgstr ""
+"منزل عثماني قديم تحوّل إلى ذاكرة مفتوحة: أدوات، مخطوطات،أبواب مساجد قديمة، "
+"وملابس حجاج من قرون مضت."
+
+#: main/views.py:43
+msgid "Peace walks on the ground here."
+msgstr "السلام يمشي على الأرض هنا."
+
+#: main/views.py:45
+msgid "Al-Hijr (Madain Saleh / UNESCO)"
+msgstr "الحجر (مدائن صالح / اليونسكو)"
+
+#: main/views.py:45
+msgid ""
+"A rock city carved 2000 years ago. The facades look like hanging doors "
+"waiting for someone to open them. Every tomb carries a name and a hand-"
+"etched story."
+msgstr ""
+"مدينة صخرية منحوتة قبل ألفي عام. تبدو واجهاتها كأبواب معلقةنتظر من يفتحها. "
+"كل قبر فيها يحمل اسمًا وحكاية محفورة باليد."
+
+#: main/views.py:46
+msgid "Dadan"
+msgstr "دادان"
+
+#: main/views.py:46
+msgid ""
+"Capital of the Dadan and Lihyan kingdoms. The rock tombs are high as if "
+"windows overlooking a bygone time. A key trading station on the incense "
+"route."
+msgstr ""
+"دادان عاصمة مملكتي دادان ولحيان. المدافن الصخرية مرتفعة كأنهانوافذ تطل على "
+"زمن غابر. كانت محطة تجارية مهمة على طريق البخور."
+
+#: main/views.py:47
+msgid "Quba Mosque"
+msgstr "مسجد قباء"
+
+#: main/views.py:47
+msgid ""
+"The first mosque in Islam. The place relies not on the beauty of details but "
+"on the beauty of history. It’s the beginning of the community before it was "
+"a building."
+msgstr ""
+"أول مسجد في الإسلام. المكان لا يعتمد على جمال التفاصيل بقدر ما يعتمد على "
+"جمال التاريخ. هو بداية الجماعة قبل أن يكون بناءً."
+
+#: main/views.py:52
+msgid "Where the sea meets the palm trees and the old salt."
+msgstr "حيث يلتقي البحر بالنخل وبالملح القديم."
+
+#: main/views.py:54
+msgid "Al-Ahsa Oasis (UNESCO)"
+msgstr "واحة الأحساء (يونسكو)"
+
+#: main/views.py:54
+msgid ""
+"Seas of palm trees. Water here is not just a river, but memory. The greatest "
+"continuously inhabited oasis in the world."
+msgstr ""
+"بحار من النخيل. الماء هنا ليس نهرًا، بل ذاكرة.أعظم واحة مأهولة باستمرار في "
+"العالم. "
+
+#: main/views.py:55
+msgid "Ibrahim Palace (Al-Hofuf)"
+msgstr "قصر إبراهيم (الهفوف)"
+
+#: main/views.py:55
+msgid ""
+"An Ottoman fortress combining Najdi and Ottoman styles. Its walls are like "
+"layers of accumulated history."
+msgstr ""
+"حصن عثماني يجمع بين النمط النجدي والعثماني.جدرانه كأنها طبقات تاريخ متراكمة."
+
+#: main/views.py:56
+msgid "Historical Port of Al-Aqeer"
+msgstr "ميناء العقير التاريخي"
+
+#: main/views.py:56
+msgid ""
+"An old gateway to the Gulf; ships from India and East Africa anchored here. "
+"A place resembling an open door to maritime history."
+msgstr ""
+"بوابة قديمة للخليج، كانت ترسو عنده السفن القادمة من الهند وشرق إفريقيا.مكان "
+"يشبه بابًا مفتوحًا للتاريخ البحري."
+
+#: main/views.py:61
+msgid "The heart of hot Najd… and the warmth of heritage."
+msgstr "قلب نجد الحارّ… ودفء التراث."
+
+#: main/views.py:63
+msgid "Al-Shanna Tower"
+msgstr "برج الشنانة"
+
+#: main/views.py:63
+msgid ""
+"An archaeological edifice that tells the story of the heroism shown by the "
+"people of Al-Ras and the strength of Bass in confronting aggression. It was "
+"a witness to their courage and sacrifice in defending their town."
+msgstr ""
+"صرح أثري يروي قصة بطولةأهل الراس وصمود أهل البص في مواجهة العدوان.كان شاهدًا "
+"على شجاعتهم وتضحياتهم في الدفاع عن مدينتهم."
+
+#: main/views.py:64
+msgid "Al Musawkaf Traditional Market"
+msgstr "سوق المسوكف التراثي"
+
+#: main/views.py:64
+msgid ""
+"A market that was a meeting point for traders, agriculture, and horses. Its "
+"scent is a mix of dates, coffee, and sun."
+msgstr "سوق كان ملتقى التجار والزراعة والخيل. رائحته خليط من تمر وقهوة وشمس."
+
+#: main/views.py:65
+msgid "Antarah's Palace and Rock"
+msgstr "صخرة عنترة"
+
+#: main/views.py:65
+msgid ""
+"A rock are two archaeological sites associated with the pre-Islamic poet "
+"Antarah Ibn Shaddad, who resided between the town of Qusayba and the Uyun al-"
+"Jiwa Governorate, within Qassim Province at the heart of the Kingdom of "
+"Saudi Arabia."
+msgstr ""
+"الصخرتان موقعان أثريان مرتبطان بالشاعر الجاهلي عنترة بن شداد،الذي سكن بين "
+"بلدة قصيبة وعيون الجواء،التابعة لمنطقة القصيم في قلب المملكة العربية "
+"السعودية."
+
+#: main/views.py:70
+msgid ""
+"Here’s the north that keeps its shadow long… a calm desert, and valleys that "
+"whisper."
+msgstr "هنا الشمال الذي يحتفظ بظلّه طويلًا… صحراء هادئة، ووديان تتكلم بهمس."
+
+#: main/views.py:72
+msgid "Tabuk Castle"
+msgstr "قلعة تبوك"
+
+#: main/views.py:72
+msgid ""
+"A fortress guarded by silent stone walls, a station for caravans and "
+"pilgrims. Armies, travelers, and worshippers passed, yet it remains… only "
+"watching."
+msgstr ""
+"حصن تحرسه جدران حجرية صامتة، كان محطة للقوافل والحجاج.مرّت عليه جيوش ورحالة "
+"ومصلّون، لكنه لا يتغير… فقط يراقب."
+
+#: main/views.py:73
+msgid "Ain Al-Sukkar (Ancient Springs)"
+msgstr "عين السكر (العيون الأثرية)"
+
+#: main/views.py:73
+msgid ""
+"Flowing water since ancient times; humans carved life and agriculture around "
+"it. Water here is not ordinary; it is a sign of survival."
+msgstr ""
+"عيون ماء جارية منذ القدم، نقش الإنسان حولها الحياة والزراعة.الماء هنا لا يُرى "
+"كعادي؛ هو دليل نجاة."
+
+#: main/views.py:74
+msgid "Wadi Al-Dissa"
+msgstr "وادي الديسة"
+
+#: main/views.py:74
+msgid ""
+"A green mountain canyon in the middle of the desert. Its rocky walls look "
+"like gates to an ancient city forgotten by time."
+msgstr ""
+"أخدود جبلي أخضر وسط الصحراء. جدرانه صخرية شاهقةكأنها بوابات لمدينة قديمة "
+"نسيها الزمن."
+
+#: main/views.py:79
+msgid ""
+"Black mountains, red inscriptions, and silence filled with stories of those "
+"who passed before us."
+msgstr "جبال سوداء، نقوش حمراء، وصمت يمتلئ بقصص من مرّوا قبلنا."
+
+#: main/views.py:81
+msgid "Jubbah (Rock Art / UNESCO)"
+msgstr "جبة (النقوش الصخرية)(يونسكو)"
+
+#: main/views.py:81
+msgid ""
+"Drawings of humans and animals thousands of years old. Ancestors drew their "
+"daily life on stone instead of paper."
+msgstr ""
+"رسومات بشر وحيوانات تعود لآلاف السنين.كأن الأسلاف رسموا يومياتهم على حجر بدل "
+"الورق."
+
+#: main/views.py:82
+msgid "Barzan Tower"
+msgstr "برج برزان"
+
+#: main/views.py:82
+msgid ""
+"A watchtower built in the late 19th century and renovated in 1910 by "
+"Muhammad bin Qasim Al Thani."
+msgstr ""
+"برج مراقبة بُني في أواخر القرن التاسع عشر، وجُدّد عام ١٩١٠ على يد محمد بن قاسم "
+"آل ثاني."
+
+#: main/views.py:83
+msgid "Al-Qishlah Palace"
+msgstr " قصر القشلة"
+
+#: main/views.py:83
+msgid ""
+"An old Ottoman administrative building. Its square, strong shape resembles "
+"the idea of “order” as cities learned early organization."
+msgstr ""
+"مبنى إداري عثماني قديم. شكله مربع وقوي، يشبه فكرة «النظام»حين كانت المدن "
+"تتعلم التنظيم الأول. "
+
+#: main/views.py:88
+msgid ""
+"A region that knows the value of water in the desert… thus becoming an oasis "
+"of civilizations."
+msgstr "منطقة تعرف قيمة الماء في الصحراء… لذلك صارت واحة للحضارات."
+
+#: main/views.py:90
+msgid "Marid Castle – Dumat Al-Jandal"
+msgstr " قلعة مارد – دومة الجندل"
+
+#: main/views.py:90
+msgid ""
+"A tall stone castle standing proudly. Said “Marid rebelled against whoever "
+"tried to break it,” and it still supports this saying."
+msgstr ""
+"قلعة حجرية عالية تقف بشموخ.يقال «تمرد مارد على من حاول كسره»، والقلعة حتى "
+"الآن تؤيد القول."
+
+#: main/views.py:91
+msgid "Omar Ibn Al-Khattab Mosque in Dumat Al-Jandal"
+msgstr "مسجد عمر بن الخطاب"
+
+#: main/views.py:91
+msgid ""
+"One of the oldest surviving mosques. Simple stone construction, preserving "
+"centuries of impact as if breathing quietly."
+msgstr ""
+"أحد أقدم المساجد الباقية.بناؤه حجري بسيط، لكنه يحفظ أثر القرون كأنه يتنفس "
+"بهدوء."
+
+#: main/views.py:92
+msgid "Dumat Al-Jandal Lake"
+msgstr "بحيرة دومة الجندل"
+
+#: main/views.py:92
+msgid ""
+"Water surprises you in the desert depths. Not just an irrigation source, but "
+"a full-life hub."
+msgstr "ماء يفاجئك في عمق الصحراء.لم يكن مجرد مصدر ري، بل محور حياة كاملة."
+
+#: main/views.py:96
+msgid "Al-Hudud Ash-Shamaliyah"
+msgstr "الحدود الشمالية"
+
+#: main/views.py:97
+msgid "Vast land, low sky, and ruins standing as markers of the old passage."
+msgstr "أرض واسعة، سماء منخفضة، وآثار تقف كعلامات للمرور القديم."
+
+#: main/views.py:99
+msgid "King Abdulaziz Palace in Linah"
+msgstr "قصر الملك عبد العزيز بلينه"
+
+#: main/views.py:99
+msgid ""
+"A royal palaces ordered to be built by the Founding King Abdulaziz Bin "
+"Abdulrahman Al Saud in various regions of the Kingdom of Saudi Arabia after "
+"its unification in 1932."
+msgstr ""
+"قصور ملكية أمر ببنائها الملك المؤسس عبد العزيز بن عبد الرحمن آل سعودفي مختلف "
+"مناطق المملكة العربية السعودية بعد توحيدها عام ١٩٣٢."
+
+#: main/views.py:100
+msgid "The Emirate Palace in Ar'ar"
+msgstr "قصر الإمارة"
+
+#: main/views.py:100
+msgid ""
+"It is considered one of the oldest palaces in the Kingdom. The palace is "
+"divided into several rooms with different uses, and specific types of "
+"mountain stones were used in its construction."
+msgstr ""
+"يُعتبر من أقدم قصور المملكة. ينقسم القصر إلى عدة غرف ذات استخدامات مختلفة،وقد "
+"استُخدمت في بنائه أنواع محددة من الأحجار الجبلية."
+
+#: main/views.py:101
+msgid "Linah Heritage Village"
+msgstr "قرية لينه التراثية"
+
+#: main/views.py:101
+msgid ""
+"A Village built during the reign of the Founding King Abdulaziz Bin "
+"Abdulrahman Al Saud during the unification of the Kingdom, the village is "
+"distinguished by its market where various goods and products were displayed."
+msgstr ""
+"قرية بُنيت في عهد الملك المؤسس عبد العزيز بن عبد الرحمن آل سعود، رحمه الله،"
+"إبان توحيد المملكة. تتميز القرية بسوقها الذي عُرضت فيه مختلف البضائع "
+"والمنتجات."
+
+#: main/views.py:106
+msgid ""
+"Wet mountains, suspended villages, and fog walking like a visitor who knows "
+"the way."
+msgstr "جبال رطبة، قرى معلّقة، وضباب يمشي مثل زائر يعرف الطريق."
+
+#: main/views.py:108
+msgid "Dhi Ayn Heritage Village"
+msgstr "قرية ذي عين التراثية"
+
+#: main/views.py:108
+msgid ""
+"Built of white stone on a green hill. Looks like a painted canvas, yet very "
+"real."
+msgstr ""
+"مبنية بالحجر الأبيض فوق ربوة خضراء. تشبه لوحة مرسومة، لكنها حقيقية جدًا."
+
+#: main/views.py:109
+msgid "Matair Al-Aish Archaeological Village"
+msgstr "قرية مطير العيش الأثرية"
+
+#: main/views.py:109
+msgid ""
+"The historic village of Mutair Al-Aish is rich in many historical and "
+"archaeological monuments, which are part of the barren Bani Assem region and "
+"surrounded by mountainous areas that reflect the beauty of nature."
+msgstr ""
+"تزخر قرية مطير العيش التاريخية بالعديد من المعالم التاريخية والأثرية،وهي جزء "
+"من منطقة بني عاصم القاحلة،وتحيط بها مناطق جبلية تعكس جمال الطبيعة."
+
+#: main/views.py:110
+msgid "Bani Kabir"
+msgstr "بني كبير"
+
+#: main/views.py:110
+msgid ""
+"A large building center is located in the northern part of Beljarshi "
+"Governorate and is 12 km² from the headquarters of the governorate, and in "
+"the southeast of the city of Al-Baha."
+msgstr ""
+"يقع مركز بناء كبير في الجزء الشمالي من محافظة بلجرشي،ويبعد ١٢ كيلومترًا مربعًا "
+"عن مقر المحافظة،وفي جنوب شرق مدينة الباحة."
+
+#: main/views.py:115
+msgid ""
+"The south that resembles no one… colored stones, and fog touching the "
+"mountains like a greeting."
+msgstr "الجنوب الذي لا يشبه أحد… حجارة ملوّنة، وضباب يمسّ الجبال كتحية."
+
+#: main/views.py:117
+msgid "Rijal Almaa Village (UNESCO candidate)"
+msgstr "قرية رجال ألمع (يونسكو مرشّح)"
+
+#: main/views.py:117
+msgid ""
+"Stone houses with colored windows, as if walls wear jewelry. The village is "
+"a stone poem."
+msgstr "منازل حجرية بنوافذ ملونة، كأن الجدران ترتدي حُلي.القرية قصيدة حجر."
+
+#: main/views.py:118
+msgid "Jabal Al-Souda"
+msgstr "جبل السودة"
+
+#: main/views.py:118
+msgid ""
+"The highest mountains in the kingdom. Clouds here are not above you, but "
+"around you."
+msgstr "أعلى جبال المملكة. السحب هنا ليست فوقك… بل حولك"
+
+#: main/views.py:119
+msgid "Hanging Al-Habla Village"
+msgstr "قرية الحبلة المعلقة"
+
+#: main/views.py:119
+msgid "Built on a steep cliff, as if a brave decision against gravity."
+msgstr "مبنية على جرف شاهق. كأنها قرار شجاع ضد الجاذبية."
+
+#: main/views.py:124
+msgid ""
+"Warm sea, coral islands, and a maritime culture that never stops singing."
+msgstr "بحر دافئ، وجزر مرجانية، وثقافة بحرية لم تتوقف عن الغناء."
+
+#: main/views.py:126
+msgid "Farasan Island"
+msgstr "جزيرة فرسان"
+
+#: main/views.py:126
+msgid "Marine reserve with coral beaches. Water here is like glass."
+msgstr "محمية بحرية وشواطئ مرجانية. الماء هنا يشبه الزجاج."
+
+#: main/views.py:127
+msgid "Luqman Castle"
+msgstr "قلعة لقمان"
+
+#: main/views.py:127
+msgid "An old stone fortress on a hill overlooking the sea."
+msgstr "قلعة حجرية قديمة تقف على تلة وتطل على البحر."
+
+#: main/views.py:128
+msgid "Al-Darb Archaeological Road"
+msgstr "الدرب الأثري"
+
+#: main/views.py:128
+msgid ""
+"An old route linking coastal villages, still walking lightly through history."
+msgstr ""
+"طريق قديم كان يربط القرى الساحلية، لا يزال يمشي بخطى خفيفة عبر التاريخ."
+
+#: main/views.py:133
+msgid ""
+"South with the taste of dark coffee… civilizations crossed from Yemen to the "
+"peninsula."
+msgstr "جنوبٌ له طعم القهوة الغامق… وحضارات عبرت من اليمن نحو الجزيرة."
+
+#: main/views.py:135
+msgid "Aba Al-Saud Heritage District"
+msgstr "حي أبا السعود التراثي"
+
+#: main/views.py:135
+msgid "Tall clay houses with small windows. Like towers made of clay."
+msgstr "بيوت طينية عالية لها نوافذ صغيرة. أشبه بأبراج من الطين."
+
+#: main/views.py:136
+msgid "Najran Rock Inscriptions"
+msgstr "رقوش نجران الصخرية"
+
+#: main/views.py:136
+msgid ""
+"Ancient southern Arabic writings. Every symbol looks like a pre-language "
+"word."
+msgstr "كتابات عربية جنوبية قديمة. كل رمز فيها يشبه كلمة قبل اللغة الحديثة."
+
+#: main/views.py:137
+msgid "Al-Okhdood Archaeological City"
+msgstr "مدينة الأخدود الأثرية"
+
+#: main/views.py:137
+msgid ""
+"It consists of a surrounding wall, remnants of buildings, artifacts, tombs, "
+"inscriptions, and drawings. Its oldest artifacts date back to the Stone Age, "
+"while its most recent ones belong to the Islamic period, including artifacts "
+"from the Umayyad and Abbasid eras."
+msgstr ""
+"تتكون من سور محيط، وبقايا مبانٍ، وقطع أثرية، ومقابر، ونقوش، ورسومات.تعود أقدم "
+"آثارها إلى العصر الحجري، بينما تعود أحدثها إلى العصر الإسلامي،بما في ذلك قطع "
+"أثرية من العصرين الأموي والعباسي."

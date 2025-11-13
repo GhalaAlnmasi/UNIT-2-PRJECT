@@ -1,0 +1,202 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#243C21',
+            secondary: '#C0DFDB',
+            brown: '#3C2215',
+            gold: '#D2AC2B',
+            orange: '#E66033',
+            beige: '#F5EAD5',
+            lemon: '#BCB833',
+            brgandy: '#901C24',
+            mov: '#DEB1D3',
+            binky: '#E99692',
+            lightred: '#AB4E44',
+            lightblue: '#0690A7'
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="{% static 'js/actions.js' %}"></script>
+
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <style>
+    /* ==== خطوط عربية ==== */
+    @font-face {
+      font-family: 'SaudiCraft';
+      src: url("{% static 'fonts/SaudiCraft/TheYearofHandicrafts-Regular.otf' %}") format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'SaudiCraft';
+      src: url("{% static 'fonts/SaudiCraft/TheYearofHandicrafts-Medium.otf' %}") format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'SaudiCraft';
+      src: url("{% static 'fonts/SaudiCraft/TheYearofHandicrafts-SemiBold.otf' %}") format('opentype');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'SaudiCraft';
+      src: url("{% static 'fonts/SaudiCraft/TheYearofHandicrafts-Bold.otf' %}") format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'SaudiCraft';
+      src: url("{% static 'fonts/SaudiCraft/TheYearofHandicrafts-Black.otf' %}") format('opentype');
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'SaudiCraft', 'Cinzel', sans-serif;
+    }
+    .arabic,
+    .arabic * {
+      font-family: 'SaudiCraft', sans-serif;
+      direction: rtl;
+    }
+
+    .english {
+      font-family: 'Cinzel', serif !important;
+      direction: ltr; 
+    }
+  </style>
+
+{% block extra_style %}
+{% endblock %}
+
+  <title>{% block title %} {% endblock %}</title>
+  
+</head>
+
+<body class="bg-beige {% if request.COOKIES.theme == 'dark' %}dark{% else %}light{% endif %}">
+  <header
+    class="fixed w-full z-50 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/0 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+
+      <!-- Logo -->
+      <a href="{% url 'main:home_view' %}" class="text-primary hover:text-gold font-bold text-4xl md:text-4xl tracking-wide">
+        {% trans "Atharana" %}
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center space-x-6 rtl:space-x-reverse text-white font-semibold">
+        <a href="{% url 'main:home_view' %}" class="hover:text-primary transition"> {% trans "Home" %} </a>
+
+        <!-- Regions Dropdown -->
+        <!-- Regions Dropdown -->
+        <div class="relative">
+          <button id="regions-btn" class="flex items-center gap-1 px-3 py-2 hover:text-primary transition">
+            {% trans "Regions" %}
+            <span id="arrow" class="material-icons text-lg transition-transform duration-300">expand_more</span>
+          </button>
+
+          <div id="regions-menu"
+            class="fixed flex justify-center w-full z-50  left-0 mt-6 opacity-0 invisible scale-95 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/0 backdrop-blur-md text-white py-3 min-w-[230px] transition-all duration-300 ease-out origin-top">
+            {% for region_id, region_name, view_name in regions_list %}
+            <a href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}" class="flex-col px-3 py-1 hover:bg-primary/10 hover:text-primary transition rounded-md">
+              {{ region_name }}
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <a href="{% url 'main:about_view' %}" class="hover:text-primary transition"> {% trans "About" %} </a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- Language Switch -->
+        <a id="lang-toggle" class="flex-col justify-center items-center">
+          <span
+            class="material-icons w-9 h-9 flex items-center justify-center bg-primary rounded-full transition hover:bg-secondary text-white">
+            language 
+          </span>
+        </a>
+
+        <!-- Theme Switch -->
+        <button id="theme-toggle"
+          class="w-8 h-8 flex items-center justify-center text-white bg-primary hover:bg-secondary rounded-full transition">
+          {% if request.COOKIES.theme == 'dark' %}
+          <span class="material-icons">dark_mode</span>
+          {% else %}
+          <span class="material-icons">wb_sunny</span>
+          {% endif %}
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <a id="mobile-menu-btn" class="text-white">
+          <span class="material-icons text-3xl">menu</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-primary/70 via-primary/20 to-primary/0 text-white backdrop-blur-md p-4 space-y-3 rounded-b-lg">
+      <a href="{% url 'main:home_view' %}" class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md"> {% trans "Home" %} </a>
+
+      <div>
+        {% for region_id, region_name, view_name in regions_list %}
+            <a href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"
+              class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md">
+              {{ region_name }}
+            </a>
+            {% endfor %}
+          </div>
+          <a href="{% url 'main:about_view' %}" class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md"> {% trans "About" %} </a>
+    </div>
+  </header>
+  
+
+  <!-- MAIN CONTENT -->
+  <main class=" flex justify-center md:pt-28">
+    {% block content %}
+
+    {% endblock %}
+  </main>
+
+  <!-- FOOTER -->
+  <footer class=" bg-gradient-to-t from-primary/60 via-primary/40 to-primary/0 text-white p-6 mt-15 text-center ">
+    <p class="text-sm md:text-base">{% trans "© 2025 Atharana. All rights reserved." %}</p>
+  </footer>
+</body>
+
+</html>
