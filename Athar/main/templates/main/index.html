@@ -18,7 +18,76 @@
     background-image: url("https://e.top4top.io/p_3604zan763.png");
     color: #fff;
   }
+  
+  .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .explor {
+    display: inline-block; 
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  
 </style>
+{% endblock %}
+
+{% block extra_script %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+ 
+    const title = document.querySelector(".animate-title");
+    const words = title.innerText.split(" ");
+    title.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(" ");
+  
+  
+    gsap.to(".word", {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out"
+    });
+  
+    const exploreBtn = document.querySelector(".explor");
+  
+  
+    gsap.fromTo(exploreBtn,
+  { y: 50, opacity: 0 },
+  { 
+    y: 0,
+    opacity: 1, 
+    duration: 0.8, 
+    delay: words.length * 0.15 + 0.3,
+    ease: "back.out(1.7)",
+    onComplete: () => {
+    
+      gsap.to(exploreBtn, {
+        y: 0,
+        scale: 1.05,
+        duration: 1.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut"
+      });
+    }
+  }
+);
+  
+  
+    exploreBtn.addEventListener("mouseenter", () => {
+      gsap.to(exploreBtn, { scale: 1.15, duration: 0.3, ease: "power1.out" });
+    });
+  
+    exploreBtn.addEventListener("mouseleave", () => {
+      gsap.to(exploreBtn, { scale: 1.05, duration: 0.3, ease: "power1.out" });
+    });
+  });
+  </script>
+  
 {% endblock %}
 
 {% block title %}
@@ -26,37 +95,48 @@
 {% endblock %}
 
 {% block content %}
-<div class="flex flex-col">
+<div class="w-full max-w-full">
 
- 
-  <section class="py-16 px-4 md:px-20">
-    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+  <section class=" mb-64 py-16 px-4 md:px-20">
+    <div class=" mt-14 flex flex-col md:flex-row justify-center items-center gap-10">
 
-      
-      <div class="md:w-1/2 text-right space-y-6">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary">
-          {% trans "Discover the shocks of Saudi Arabian cities" %}
+      <div class="text-center">
+        <h1 class="text-3xl mb-20 sm:text-4xl md:text-5xl font-extrabold text-primary animate-title">
+          {% trans "Discover the Historical of Saudi Arabian cities" %}
         </h1>
-        <p class="text-primary text-lg sm:text-xl md:text-2xl leading-relaxed">
-          {% trans "From Riyadh, the birthplace of the modern state, to Diriyah, steeped in the rich history of the past, " %}
-          {% trans "this site offers a window into the Kingdom's history through its historical landmarks and distinctive military sites." %}
-          {% trans "Every fortress, every palace, and every street tells a story of civilization and heritage, and every visit here takes " %}
-          {% trans "you on a journey between past and present, revealing the diverse identities of Saudi cities across the centuries." %}
-        </p>
+
         <a href="#map-section"
-          class=" explor inline-block mt-4 px-6 py-3 bg-gold text-primary rounded-lg shadow-md hover:bg-yellow-700 transition">
-          {% trans "Explore the ruins" %} </a>
+          class="explor inline-block mt-22 md:mt-28 px-6 py-3 bg-gold text-primary rounded-lg shadow-md hover:bg-yellow-700 transition">
+          {% trans "Explore the ruins" %}
+        </a>
       </div>
+
     </div>
   </section>
-  <section id="map-section">
-    <div class="relative w-full flex flex-col items-center"> 
-      <!-- Map --> 
-      <object id="saudi-map" type="image/svg+xml"
-        data="{% static 'images/saudi_map.svg' %}"></object>
+
+  <section id="map-section" class=" px-4 py-8">
+    <div class="w-full flex flex-col md:flex-row items-center gap-6">
+  
+     
+      <p class="text-primary text-center text-lg sm:text-xl md:text-2xl leading-relaxed md:text-center max-w-2xl bg-white/20 backdrop-blur-md px-2 py-2 rounded-2xl hover:bg-white/40 transition shadow-lg z-20 ">
+        {% trans "From Riyadh, the birthplace of the modern state, to Diriyah, steeped in the rich history of the past, " %}
+        {% trans "this site offers a window into the Kingdom's history through its historical landmarks and distinctive military sites." %}
+        {% trans "Every fortress, every palace, and every street tells a story of civilization and heritage, and every visit here takes " %}
+        {% trans "you on a journey between past and present, revealing the diverse identities of Saudi cities across the centuries." %}
+      </p>
+  
+   
+      <div  id="saudi-map" type="image/svg+xml" class="w-full max-w-md md:max-w-lg lg:max-w-xl">
+        {% include 'svg/saudi_map.svg' %}
+      </div>
       <div id="map-links" class="hidden"> {% for region_id, region_name, view_name in regions_list %} <a
-          href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"> {{ region_name }} </a> {% endfor %}
-      </div>
+        href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"> {{ region_name }} </a> {% endfor %}
     </div>
+    </div>
+   
   </section>
-</div> {% endblock %}
+  
+  
+
+</div>
+{% endblock %}

@@ -15,6 +15,9 @@
   <!-- Google Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=expand_circle_up" />
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -26,6 +29,7 @@
             primary: '#243C21',
             secondary: '#C0DFDB',
             brown: '#3C2215',
+            bgcolor: '#FFF6EA',
             gold: '#D2AC2B',
             orange: '#E66033',
             beige: '#F5EAD5',
@@ -85,6 +89,7 @@
     body {
       font-family: 'SaudiCraft', 'Cinzel', sans-serif;
     }
+
     .arabic,
     .arabic * {
       font-family: 'SaudiCraft', sans-serif;
@@ -93,24 +98,80 @@
 
     .english {
       font-family: 'Cinzel', serif !important;
-      direction: ltr; 
+      direction: ltr;
+    }
+
+
+    @media (max-width: 768px) {
+
+      /* GENERAL */
+      body {
+        font-size: 14px !important;
+      }
+
+      main {
+        padding: 7px !important;
+        width: 100%;
+      }
+
+      /* HEADER */
+      header .max-w-7xl {
+        padding: 10px !important;
+      }
+
+      header a.text-3xl,
+      header a.text-4xl {
+        font-size: 26px !important;
+      }
+
+      /* HIDE DESKTOP NAV */
+      nav {
+        display: none !important;
+      }
+
+      /* MOBILE MENU STYLE */
+      #mobile-menu {
+        padding: 14px !important;
+        border-radius: 0 0 14px 14px;
+      }
+
+      #mobile-menu a {
+        font-size: 16px !important;
+        padding: 12px 6px !important;
+      }
+    }
+
+    /* FOOTER */
+    @media (max-width: 768px) {
+      footer h2 {
+        font-size: 22px !important;
+      }
+
+      footer p {
+        font-size: 13px !important;
+      }
+
+      .bgFooter {
+        visibility: hidden !important;
+      }
     }
   </style>
 
-{% block extra_style %}
-{% endblock %}
+  {% block extra_style %}
+  {% endblock %}
 
   <title>{% block title %} {% endblock %}</title>
-  
+
 </head>
 
-<body class="bg-beige {% if request.COOKIES.theme == 'dark' %}dark{% else %}light{% endif %}">
+<body class="bg-bgcolor {% if request.COOKIES.theme == 'dark' %}dark{% else %}light{% endif %}">
   <header
     class="fixed w-full z-50 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/0 backdrop-blur-md shadow-md">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
 
       <!-- Logo -->
-      <a href="{% url 'main:home_view' %}" class="text-primary hover:text-gold font-bold text-4xl md:text-4xl tracking-wide">
+      <a href="{% url 'main:home_view' %}"
+        class="text-primary hover:text-gold font-bold text-4xl md:text-4xl tracking-wide">
         {% trans "Atharana" %}
       </a>
 
@@ -129,7 +190,8 @@
           <div id="regions-menu"
             class="fixed flex justify-center w-full z-50  left-0 mt-6 opacity-0 invisible scale-95 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/0 backdrop-blur-md text-white py-3 min-w-[230px] transition-all duration-300 ease-out origin-top">
             {% for region_id, region_name, view_name in regions_list %}
-            <a href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}" class="flex-col px-3 py-1 hover:bg-primary/10 hover:text-primary transition rounded-md">
+            <a href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"
+              class="flex-col px-3 py-1 hover:bg-primary/10 hover:text-primary transition rounded-md">
               {{ region_name }}
             </a>
             {% endfor %}
@@ -145,7 +207,7 @@
         <a id="lang-toggle" class="flex-col justify-center items-center">
           <span
             class="material-icons w-9 h-9 flex items-center justify-center bg-primary rounded-full transition hover:bg-secondary text-white">
-            language 
+            language
           </span>
         </a>
 
@@ -170,33 +232,76 @@
 
     <!-- Mobile Menu -->
 
-    <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-primary/70 via-primary/20 to-primary/0 text-white backdrop-blur-md p-4 space-y-3 rounded-b-lg">
-      <a href="{% url 'main:home_view' %}" class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md"> {% trans "Home" %} </a>
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-gradient-to-b from-primary/70 via-primary/20 to-primary/0 text-white backdrop-blur-md p-4 space-y-3 rounded-b-lg">
+      <a href="{% url 'main:home_view' %}"
+        class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md"> {% trans "Home" %} </a>
 
       <div>
         {% for region_id, region_name, view_name in regions_list %}
-            <a href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"
-              class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md">
-              {{ region_name }}
-            </a>
-            {% endfor %}
-          </div>
-          <a href="{% url 'main:about_view' %}" class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md"> {% trans "About" %} </a>
+        <a href="{% url 'main:'|add:view_name %}" data-region="{{ region_id }}"
+          class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md">
+          {{ region_name }}
+        </a>
+        {% endfor %}
+      </div>
+      <a href="{% url 'main:about_view' %}"
+        class="block px-5 py-2 hover:bg-primary/10 hover:text-primary transition rounded-md"> {% trans "About" %} </a>
     </div>
   </header>
-  
+
 
   <!-- MAIN CONTENT -->
-  <main class=" flex justify-center md:pt-28">
+  <main class=" w-full max-w-full flex flex-col pt-28">
     {% block content %}
 
     {% endblock %}
   </main>
 
+  <a href="#top"
+    class="fixed right-4 top-3/4 -translate-y-1/2 pt-1.5 px-2 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/40 transition shadow-lg z-50">
+    <span class="material-symbols-outlined text-6xl text-primary">expand_circle_up</span>
+  </a>
+
   <!-- FOOTER -->
-  <footer class=" bg-gradient-to-t from-primary/60 via-primary/40 to-primary/0 text-white p-6 mt-15 text-center ">
-    <p class="text-sm md:text-base">{% trans "© 2025 Atharana. All rights reserved." %}</p>
+  <footer class="relative text-primary  flex flex-col justify-end mt-32 hover:text-lightred">
+    <!-- Background -->
+    <div class="bgFooter absolute bg-cover bg-center bg-no-repeat opacity-60 h-[250px] w-full ">
+    </div>
+
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto w-full z-10  px-6 pb-3 ">
+
+      <!-- Top Section -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <!-- Logo / Title -->
+        <a href="{% url 'main:home_view' %}">
+        <h2 class="text-2xl font-bold tracking-wide">{% trans "Atharana" %}</h2>
+      </a>
+
+        <!-- Social Icons -->
+        <div class="flex gap-7 text-lg">
+          <a href="https://www.linkedin.com/in/ghalaalnmasi" target="_blank" class="hover:opacity-70">
+            <img src="{% static 'images/linkedin.png' %}" alt="Linkedin Logo" class="w-10 h-auto mx-auto">
+          </a>
+          <a href="https://github.com/GhalaAlnmasi" target="_blank" class="hover:opacity-70">
+            <img src="{% static 'images/github.png' %}" alt="GitHub Logo" class="w-10 h-auto mx-auto">
+          </a>
+        </div>
+      </div>
+      <!-- Divider -->
+      <div class="border-t border-white/20 my-6"></div>
+
+      <!-- Bottom Section -->
+      <p class="text-center text-sm opacity-80">
+        {% trans "© 2025 Atharana. All rights reserved." %}
+      </p>
+    </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  {% block extra_script %}
+  {% endblock %}
 </body>
 
 </html>

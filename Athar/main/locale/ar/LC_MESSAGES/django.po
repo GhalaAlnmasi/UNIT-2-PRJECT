@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Athar 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-13 01:31+0000\n"
+"POT-Creation-Date: 2025-11-15 23:43+0000\n"
 "PO-Revision-Date: 2025-11-10 00:00+0000\n"
 "Last-Translator: Your Name <you@example.com>\n"
 "Language-Team: Arabic\n"
@@ -44,72 +44,67 @@ msgstr " لتقديم تجربة فريدة تعكس روح المملكة."
 msgid "Return to homepage"
 msgstr "العودة للرئيسية"
 
-#: main/templates/main/al-hudud-ash-shamaliyah.html:5
-#: main/templates/main/ash-sharqiyah.html:5 main/templates/main/asir.html:5
-#: main/templates/main/bahah.html:5 main/templates/main/hail.html:5
-#: main/templates/main/jizan.html:5 main/templates/main/jouf.html:5
-#: main/templates/main/madinah.html:5 main/templates/main/makkah.html:5
-#: main/templates/main/najran.html:5 main/templates/main/qassim.html:5
-#: main/templates/main/riyadh.html:5 main/templates/main/tabuk.html:5
-#: main/views.py:15 main/views.py:114
-msgid "Asir"
-msgstr "عسير"
-
-#: main/templates/main/base.html:114
+#: main/templates/main/base.html:175 main/templates/main/base.html:280
 msgid "Atharana"
 msgstr "أثــارانــا"
 
-#: main/templates/main/base.html:119 main/templates/main/base.html:174
+#: main/templates/main/base.html:180 main/templates/main/base.html:238
 msgid "Home"
 msgstr "الرئيسية"
 
-#: main/templates/main/base.html:125
+#: main/templates/main/base.html:186
 msgid "Regions"
 msgstr "المناطق"
 
-#: main/templates/main/base.html:139 main/templates/main/base.html:184
+#: main/templates/main/base.html:201 main/templates/main/base.html:249
 msgid "About"
 msgstr "حول"
 
-#: main/templates/main/base.html:198
+#: main/templates/main/base.html:298
 msgid "© 2025 Atharana. All rights reserved."
 msgstr "© 2025 آثارنا. جميع الحقوق محفوظة."
 
-#: main/templates/main/index.html:25
+#: main/templates/main/index.html:92
 msgid "Home Page"
 msgstr "الرئيسية"
 
-#: main/templates/main/index.html:38
-msgid "Discover the shocks of Saudi Arabian cities"
-msgstr "اكتشف آثار مدن المملكة العربية السعودية"
+#: main/templates/main/index.html:103
+msgid "Discover the Historical of Saudi Arabian cities"
+msgstr " السعودية العربية المملكة مدن آثار اكتشف"
 
-#: main/templates/main/index.html:41
+#: main/templates/main/index.html:108
+msgid "Explore the ruins"
+msgstr "استكشف الآثار"
+
+#: main/templates/main/index.html:120
 msgid ""
 "From Riyadh, the birthplace of the modern state, to Diriyah, steeped in the "
 "rich history of the past, "
-msgstr "من الرياض حيث شهدت ولادة الدولة الحديثة، إلى الدرعية التي تحمل عبق الماضي الأصيل،"
+msgstr ""
+"من الرياض حيث شهدت ولادة الدولة الحديثة، إلى الدرعية التي تحمل عبق الماضي "
+"الأصيل،"
 
-#: main/templates/main/index.html:42
+#: main/templates/main/index.html:121
 msgid ""
 "this site offers a window into the Kingdom's history through its historical "
 "landmarks and distinctive military sites."
-msgstr "يقدم هذا الموقع نافذة على تاريخ المملكة من خلال آثارها ومواقعها التاريخية المميزة."
+msgstr ""
+"يقدم هذا الموقع نافذة على تاريخ المملكة من خلال آثارها ومواقعها التاريخية "
+"المميزة."
 
-#: main/templates/main/index.html:43
+#: main/templates/main/index.html:122
 msgid ""
 "Every fortress, every palace, and every street tells a story of civilization "
 "and heritage, and every visit here takes "
-msgstr "كل حصن، كل قصر، وكل شارع يحكي قصة حضارة وتراث، وكل زيارة هنا تأخذك في رحلة"
+msgstr ""
+"كل حصن، كل قصر، وكل شارع يحكي قصة حضارة وتراث، وكل زيارة هنا تأخذك في رحلة"
 
-#: main/templates/main/index.html:44
+#: main/templates/main/index.html:123
 msgid ""
 "you on a journey between past and present, revealing the diverse identities "
 "of Saudi cities across the centuries."
-msgstr "زمنية بين الماضي والحاضر، لتعرف كيف تشكلت هوية المدن السعودية عبر القرون"
-
-#: main/templates/main/index.html:48
-msgid "Explore the ruins"
-msgstr "استكشف الآثار"
+msgstr ""
+"زمنية بين الماضي والحاضر، لتعرف كيف تشكلت هوية المدن السعودية عبر القرون"
 
 #: main/views.py:6 main/views.py:24
 msgid "Riyadh"
@@ -146,6 +141,10 @@ msgstr "حايل"
 #: main/views.py:14
 msgid "Al-Hudud Ash-Shamaliyah"
 msgstr "الحدود الشمالية"
+
+#: main/views.py:15 main/views.py:114
+msgid "Asir"
+msgstr "عسير"
 
 #: main/views.py:16 main/views.py:105
 msgid "Al-Baha"

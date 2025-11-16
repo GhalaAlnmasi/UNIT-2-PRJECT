@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentLang = cookies['django_language'] || 'ar';
             const nextLang = currentLang === 'en' ? 'ar' : 'en';
 
-            // تحويل للـ URL الجديد بعد تأخير بسيط
+            
             setTimeout(() => {
                 window.location.href = `/set-language/${nextLang}/?HTTP_REFERER=${encodeURIComponent(window.location.href)}`;
-            }, 150); // تأخير 0.15 ثانية
+            }, 150); 
         });
     }
 
@@ -87,29 +87,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Map link
-document.addEventListener('DOMContentLoaded', () => {
-  const mapObject = document.getElementById('saudi-map');
-  const links = document.querySelectorAll('#map-links a');
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("#map-links a");
 
-  mapObject.addEventListener('load', () => {
-    const svgDoc = mapObject.contentDocument;
-    console.log("✅ SVG Loaded:", svgDoc);
+  links.forEach(link => {
+    const regionId = link.dataset.region;
+    const href = link.getAttribute("href");
 
-    links.forEach(link => {
-      const regionId = link.dataset.region;
-      const href = link.getAttribute('href');
-      const regionElement = svgDoc.getElementById(regionId);
+    
+    const regionElement = document.getElementById(regionId);
 
-      if (regionElement) {
-        console.log(`Linked region: ${regionId} → ${href}`);
-        regionElement.style.cursor = 'pointer';
-        regionElement.addEventListener('click', () => window.location.href = href);
-      } else {
-        console.warn(`❌ Region not found in SVG: ${regionId}`);
-      }
-    });
+    if (regionElement) {
+      console.log(`Linked: ${regionId} → ${href}`);
+
+      regionElement.style.cursor = "pointer";
+
+      regionElement.addEventListener("click", () => {
+        window.location.href = href;
+      });
+
+      
+      regionElement.addEventListener("mouseenter", () => {
+        regionElement.style.opacity = "0.7";
+      });
+
+      regionElement.addEventListener("mouseleave", () => {
+        regionElement.style.opacity = "1";
+      });
+
+    } else {
+      console.warn(`Region not found: ${regionId}`);
+    }
   });
 });
-
-
-
